@@ -25,7 +25,7 @@ stages {
         script {
          sh 'sudo docker build -t amitpandey1992/demo .'
         sh 'sudo docker run -d -p 3000:9080 amitpandey1992/demo'
-     sh 'sudo docker login -U=$env.username -P=$env.password'
+     sh 'sudo docker login --username=$env.username --password=$env.password'
             }
       }
      }
