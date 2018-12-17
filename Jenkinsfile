@@ -24,7 +24,7 @@ stages {
         steps {
         script {
          sh 'sudo docker build -t amitpandey1992/demo .'
-        sh 'docker run -d -p 8082:8081 amitpandey1992/demo
+        sh 'docker run -d -p 8082:9080 amitpandey1992/demo
      
             }
       }
