@@ -13,14 +13,10 @@ stages {
       stage('Build customer app code'){
         steps {
         script {
-       /*sh 'sudo yum -y install java-1.8.0-openjdk'*/
-         sh 'sudo apt-get update'
-sh 'sudo apt-get install -y default-jdk'
-
-
-       /*sh 'sudo apt-get install -y oracle-java8-installer'*/
-       sh 'sudo yum -y install maven'
-       sh 'mvn clean install'
+       sh 'apt-get update'  
+       sh 'sudo apt-get -y install default-jdk'
+       sh 'sudo apt-get -y install maven'
+       sh 'mvn clean install -Dmaven.test.skip=true'
        }
       }
      }
