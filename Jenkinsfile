@@ -13,7 +13,7 @@ stages {
       stage('Build customer app code'){
         steps {
         script {
-       sh 'yum -y install unzip java-1.8.0-openjdk'
+       sh 'sudo yum -y install java-1.8.0-openjdk'
        sh 'sudo yum -y install maven'
        sh 'mvn clean install'
        }
