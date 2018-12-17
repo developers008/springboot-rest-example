@@ -20,5 +20,13 @@ stages {
        }
       }
      }
+ stage('Dockarizing the image'){
+        steps {
+        script {
+        sh 'docker container run -d -p 8082:8081 -v /var/run/docker.sock:/var/run/docker.sock amitpandey1992/demo
+       sh 'sudo docker build -t amitpandey1992/demo .'
+            }
+      }
+     }
     }
 }
