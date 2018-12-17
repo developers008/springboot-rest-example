@@ -17,7 +17,7 @@ stages {
          sh 'sudo apt-get -y update && sudo apt-get -y upgrade'
 sh 'sudo apt-get install -y software-properties-common'
 sh 'sudo add-apt-repository ppa:webupd8team/java'
-sh 'sudo apt-get update'
+sh 'sudo apt-get -y update'
 sh 'sudo apt-get install -y oracle-java8-installer'
 sh 'sudo apt-get install -y openjdk-8-jdk'
 sh 'sudo apt-get install -y openjdk-8-jre'
