@@ -14,7 +14,7 @@ stages {
         steps {
         script {
        /*sh 'sudo yum -y install java-1.8.0-openjdk'*/
-         sh 'sudo apt-get -y update'
+         sh 'sudo apt-get update'
 sh 'sudo apt-get install -y default-jdk'
 
 
