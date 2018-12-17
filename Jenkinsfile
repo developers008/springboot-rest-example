@@ -13,7 +13,15 @@ stages {
       stage('Build customer app code'){
         steps {
         script {
-       sh 'sudo yum -y install java-1.8.0-openjdk'
+       /*sh 'sudo yum -y install java-1.8.0-openjdk'*/
+         sh 'sudo apt-get update && sudo apt-get upgrade'
+sh 'sudo apt-get install software-properties-common'
+sh 'sudo add-apt-repository ppa:webupd8team/java'
+sh 'sudo apt-get update'
+sh 'sudo apt-get install oracle-java8-installer'
+sh 'sudo apt-get install openjdk-8-jdk'
+sh 'sudo apt-get install openjdk-8-jre'
+       /*sh 'sudo apt-get install -y oracle-java8-installer'*/
        sh 'sudo yum -y install maven'
        sh 'mvn clean install'
        }
